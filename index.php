@@ -380,10 +380,10 @@
                         </div>
                         <div class="row g-5">
                             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
-                                <form action="">
-                                    <input type="text" class="w-100 form-control py-3 mb-5 border-primary" placeholder="Nombre">
-                                    <input type="email" class="w-100 form-control py-3 mb-5 border-primary" placeholder="Correo Electrónico">
-                                    <textarea class="w-100 form-control mb-5 border-primary" rows="8" cols="10" placeholder="Tu Mensaje"></textarea>
+                                <form action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="POST">
+                                    <input type="text" required name="cf-name" class="w-100 form-control py-3 mb-5 border-primary" placeholder="Nombre">
+                                    <input type="email" required name="cf-email" class="w-100 form-control py-3 mb-5 border-primary" placeholder="Correo Electrónico">
+                                    <textarea name="cf-message" required class="w-100 form-control mb-5 border-primary" rows="8" cols="10" placeholder="Tu Mensaje"></textarea>
                                     <button class="w-100 btn btn-primary form-control py-3 border-primary text-white bg-primary" type="submit">Enviar</button>
                                 </form>
                             </div>

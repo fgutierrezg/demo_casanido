@@ -119,4 +119,31 @@ function menu_register() {
 }
 add_action('after_setup_theme', 'menu_register');
 
+//Logica para contact-from
+add_action('init', 'process_contact_form');
+
+function process_contact_form() {
+    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['cf-name'])) {
+          $name    = sanitize_text_field($_POST["cf-name"]);
+    $email   = sanitize_email($_POST["cf-email"]);
+    $message = sanitize_textarea_field($_POST["cf-message"]);
+
+    $to      = ["francio.gut@gmail.com","francisco.gutierrez.g@live.cl"];
+    $subject = "Mensaje formulario de contacto Casa Nido";
+    $headers = array('Content-Type: text/html; charset=UTF-8', "Reply-To: $email");
+    $body    = "
+        <h2>Nuevo mensaje desde formulario de contacto</h2>
+        <p><strong>Nombre:</strong> $name</p>
+        <p><strong>Email:</strong> $email</p>
+        <p><strong>Mensaje:</strong><br>$message</p>
+    ";
+
+    if (wp_mail($to, $subject, $body, $headers)) {
+        echo '<script>alert("¡Gracias! Tu mensaje ha sido enviado correctamente.");</script>';
+    } else {
+        echo '<script>alert("Hubo un problema al enviar el mensaje. Intenta nuevamente.");</script>';
+    }
+    }
+}
+
 require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php'; // Navwalker para Bootstrap
