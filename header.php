@@ -27,12 +27,11 @@
                 <div class="d-flex justify-content-between">
                     <div class="top-info ps-2">
                         <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Francisco Bilbao 320, Curicó</a></small>
-                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Correo@Ejemplo.com</a></small>
+                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="mailto:mpalma@casanidoguarderia.cl" class="text-white">mpalma@casanidoguarderia.cl</a></small>
                     </div>
                     <div class="top-link pe-2">
-                        <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-secondary"></i></a>
-                        <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-twitter text-secondary"></i></a>
-                        <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-instagram text-secondary"></i></a>
+                        <a href="https://www.instagram.com/casanido_afterschool" title="Afterschool" target="_blank" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-instagram text-secondary"></i></a>
+                        <a href="https://www.instagram.com/casanido_escuela_de_lenguaje" title="Escuela de Lenguaje" target="_blank" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-instagram text-secondary"></i></a>
                     </div>
                 </div>
             </div>
@@ -50,15 +49,14 @@
     wp_nav_menu(array(
         'theme_location'  => 'menu-principal',
         'container'       => 'div',
-        'menu_class'      => 'navbar-nav mx-auto',
+        'menu_class'      => 'navbar-nav',
         'fallback_cb'     => false,
         'depth'           => 1,
         'walker' => new WP_Bootstrap_Navwalker(),
-  
     ));
     ?>
     
-    <div class="d-flex me-4">
+    <div class="d-flex ms-auto align-items-center" style="gap: 1rem;">
         <div id="phone-tada" class="d-flex align-items-center justify-content-center">
             <a href="" class="position-relative wow tada" data-wow-delay=".9s">
                 <i class="fa fa-phone-alt text-primary fa-2x me-4"></i>
@@ -67,9 +65,9 @@
                 </div>
             </a>
         </div>
-        <div class="d-flex flex-column pe-3 border-end border-primary">
+        <div class="d-flex flex-column pe-3">
             <span class="text-primary">Llámanos</span>
-            <a href="#"><span class="text-secondary">+ 0123 456 7890</span></a>
+            <a href="#"><span class="text-secondary">+569 82718947</span></a>
         </div>
     </div>
 </div>

@@ -142,13 +142,9 @@
                 autoplayTimeout: 8000,
                 autoplayHoverPause: false,
                 dots: true,
-                nav: true, // <- activa flechas
+                nav: false, // <- activa flechas
                  smartSpeed: 1500,
-                navText: [
-                    '<i class="fas fa-chevron-left"></i>',
-                    '<i class="fas fa-chevron-right"></i>'
-                ],
-       
+             
             });
 
             
